@@ -2,7 +2,7 @@
 
 __Um app para você cadastrar seus carros favoritos.__
 
-
+![car_catalogue_demonstration](https://github.com/user-attachments/assets/23dd8a3b-582c-460e-bb2e-4dd9b16d5cef)
 
 No app é possível escolher dois idiomas, inglês e português brasileiro
 
@@ -12,31 +12,31 @@ Todos os campos obrigatórios dos formulários possuem validação
 
 ### Marca 
 
-
+![car_catalogue_creating_brand](https://github.com/user-attachments/assets/0f9f70d8-5dd4-4812-8a68-fa9a63022612)
 
 ### Carro
 
-
+![car_catalogue_creating_car](https://github.com/user-attachments/assets/9b4fec0b-e2be-4c65-a24f-6e16196176e0)
 
 ## Editando
 
 ### Marca
 
-
+![car_catalogue_editing_brand](https://github.com/user-attachments/assets/a1f376a7-4dcd-42c9-a19c-2b72203ffdb4)
 
 ### Carro
 
-
+![car_catalogue_editing_car](https://github.com/user-attachments/assets/99918aa4-e39b-4415-b93f-050094ec88e0)
 
 ## Excluindo
 
 ### Marca
 
-
+![car_catalogue_deleting_brand](https://github.com/user-attachments/assets/3e3b68f7-445a-4bc1-bbcf-52de87597fa1)
 
 ### Carro
 
-
+![car_catalogue_deleting_car](https://github.com/user-attachments/assets/639fcde6-a764-4703-9055-5952e9e1aff2)
 
 ## Instruções gerais
 
