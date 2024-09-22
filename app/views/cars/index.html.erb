@@ -1,0 +1,44 @@
+<p style="color: green"><%= notice %></p>
+
+<% if @cars.count > 0 %>
+
+  <h1><%= Car.model_name.human(count: @cars.count) %></h1>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th><%= @cars.human_attribute_name(:description) %></th>
+        <th><%= @cars.human_attribute_name(:year) %></th>
+        <th><%= @cars.human_attribute_name(:url_image) %></th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @cars.each do |car| %>
+        <tr>
+          <td><%= car.description %></td>
+          <td><%= car.year %></td>
+          <td> <%= image_tag car_url_image(car), size: "125x80", alt: "#{car.description} image" %> </td>
+          <td><%= link_to t('links.show'), car %></td>
+          <td><%= link_to t('links.edit'), edit_car_path(car) %></td>
+          <td><%= link_to t('links.delete'), car, data: { turbo_method: :delete, turbo_confirm: t('messages.confirm') } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<% else %>
+
+  <br>
+
+  <P class="font-weight-bold text-danger text-center"> <%= t('empty.car') %> </P>
+
+  <br>
+  
+<% end %> 
+
+
+<br>
+
+<%= link_to t('new.car'), new_car_path, class:"btn btn-primary" %>
+

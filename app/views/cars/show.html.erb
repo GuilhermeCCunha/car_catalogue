@@ -1,0 +1,33 @@
+<p style="color: green"><%= notice %></p>
+
+<form>
+
+  <div class="form-group">
+    <%= label_tag nil, @car.class.human_attribute_name(:description) %>
+    <%= text_field_tag nil, @car.description, class:"form-control", disabled: true %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag nil, @car.class.human_attribute_name(:year) %>
+    <%= text_field_tag nil, @car.year, class:"form-control", disabled: true %>
+  </div>
+
+  <% if !@car.url_image.empty? %>
+
+    <div class="form-group">
+      <%= label_tag nil, @car.class.human_attribute_name(:url_image) %>
+      <%= text_field_tag nil,@car.url_image , class:"form-control", disabled: true %>
+    </div>
+
+  <% end %>
+  
+  <div class="form-group">
+    <%= label_tag nil, @car.class.human_attribute_name(:brand) %>
+    <%= text_field_tag nil, @car.brand.brand_name , class:"form-control", disabled: true %>
+  </div>
+  
+</form>
+
+<%= link_to t('links.edit'), edit_car_path(@car), class:"btn btn-primary" %> |
+<%= link_to t('links.back_to') + " #{@car.brand.brand_name}", @car.brand, class:"btn btn-primary"  %> |
+<%= link_to t('links.back_to') + " #{Car.model_name.human(count: :many)}", cars_path, class:"btn btn-primary" %>

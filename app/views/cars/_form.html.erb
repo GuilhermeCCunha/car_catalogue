@@ -1,0 +1,40 @@
+<%= form_with(model: car, local: true) do |form| %>
+  <% if car.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(car.errors.count, t('error', count: car.errors.count)) %> <%= t('error_explanation.car', count: car.errors.count) %></h2>
+
+      <ul>
+      <% car.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :description %>
+    <%= form.text_field :description, class:"form-control", placeholder:"Volkswagen Beetle" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :year %>
+    <%= form.number_field :year, class:"form-control", placeholder:"1970" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :url_image %>
+    <i class="text-muted"><%= t('messages.optional') %></i>
+    <%= form.text_field :url_image, class:"form-control", placeholder:"https://i.imgur.com/beetle.jpeg" %>
+  </div>
+  
+  <div class="form-group">
+    <%= form.label :brand_id %>
+    <%= form.select("brand_id", @brand_options, { include_blank: t('messages.select_box') }, class:"form-control") %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit nil, class:"btn btn-primary"  %>
+  </div>
+<% end %>
+
+</br>

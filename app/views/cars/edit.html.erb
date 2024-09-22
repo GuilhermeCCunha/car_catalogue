@@ -1,0 +1,7 @@
+<h1><%= t('editing.car') %></h1>
+
+<%= render 'form', car: @car %>
+
+<%= link_to t('links.show'), @car, class:"btn btn-primary"  %> |
+<%= link_to t('links.back_to') + " #{@car.brand.brand_name}", @car.brand, class:"btn btn-primary"  %> |
+<%= link_to t('links.back_to') + " #{Car.model_name.human(count: :many)}", cars_path, class:"btn btn-primary" %>
